@@ -1,0 +1,863 @@
+/* =========================================
+   CLAIMCHECK — GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #f5f5f5;
+    background: #080808;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+
+    background: #080808;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   APP
+========================================= */
+
+.app {
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 255, 255, 0.08),
+            transparent 35%
+        ),
+        #080808;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+    width: min(1180px, 92%);
+
+    margin: auto;
+
+    padding: 28px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-weight: 700;
+}
+
+.logo-mark {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid #444;
+
+    border-radius: 10px;
+
+    font-weight: 800;
+}
+
+.logo-text {
+    font-size: 18px;
+}
+
+.nav-links {
+    display: flex;
+
+    gap: 30px;
+
+    color: #9d9d9d;
+
+    font-size: 14px;
+}
+
+.nav-links a {
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 760px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.hero-content {
+    width: min(900px, 92%);
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 80px 0 140px;
+}
+
+.hero-badge {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border: 1px solid #333;
+
+    border-radius: 100px;
+
+    color: #aaa;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 92px);
+
+    line-height: 0.98;
+
+    letter-spacing: -5px;
+
+    font-weight: 750;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #777;
+}
+
+.hero-description {
+    max-width: 600px;
+
+    margin: 32px auto;
+
+    color: #999;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 38px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 14px 24px;
+
+    border-radius: 12px;
+
+    border: 1px solid #333;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border 0.2s ease;
+}
+
+.primary-btn {
+    background: white;
+
+    color: black;
+
+    border-color: white;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+
+    background: #e8e8e8;
+}
+
+.secondary-btn {
+    background: #151515;
+
+    color: white;
+}
+
+.secondary-btn:hover {
+    transform: translateY(-2px);
+
+    background: #202020;
+
+    border-color: #555;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.demo-section,
+.how-section {
+    width: min(1100px, 92%);
+
+    margin: auto;
+
+    padding: 120px 0;
+}
+
+.section-heading {
+    margin-bottom: 50px;
+}
+
+.eyebrow {
+    color: #666;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: clamp(32px, 5vw, 54px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.product-card {
+    border: 1px solid #262626;
+
+    border-radius: 24px;
+
+    background: #0f0f0f;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.product-info {
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #222;
+}
+
+.product-image {
+    width: 70px;
+    height: 70px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 16px;
+
+    background: #1b1b1b;
+
+    color: #666;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+.product-label,
+.claim-label {
+    color: #666;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+.product-info h3 {
+    font-size: 24px;
+}
+
+.product-meta {
+    margin-top: 5px;
+
+    color: #666;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   CLAIM
+========================================= */
+
+.claim-area {
+    padding: 35px;
+
+    border-bottom: 1px solid #222;
+}
+
+.claim {
+    font-size: 28px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   RESULT
+========================================= */
+
+.result-area {
+    padding: 35px;
+}
+
+.result-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.result-header h3 {
+    font-size: 30px;
+}
+
+.status {
+    padding: 8px 12px;
+
+    border-radius: 100px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+.status.contradicted {
+    background: #2b1717;
+
+    color: #ff8d8d;
+
+    border: 1px solid #542323;
+}
+
+
+/* =========================================
+   EVIDENCE
+========================================= */
+
+.evidence {
+    margin-top: 35px;
+}
+
+.evidence-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.evidence-grid > div {
+    padding: 20px;
+
+    border: 1px solid #242424;
+
+    border-radius: 14px;
+
+    background: #121212;
+}
+
+.evidence-grid span {
+    display: block;
+
+    color: #666;
+
+    font-size: 12px;
+
+    margin-bottom: 8px;
+}
+
+.evidence-grid strong {
+    font-size: 15px;
+}
+
+
+/* =========================================
+   EXPLANATION
+========================================= */
+
+.explanation {
+    margin-top: 12px;
+
+    padding: 20px;
+
+    border-left: 2px solid #555;
+
+    background: #111;
+}
+
+.explanation strong {
+    font-size: 14px;
+}
+
+.explanation p {
+    margin-top: 8px;
+
+    color: #999;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.steps {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.step {
+    padding: 30px;
+
+    border: 1px solid #222;
+
+    border-radius: 18px;
+
+    background: #0d0d0d;
+
+    transition:
+        transform 0.2s ease,
+        border 0.2s ease;
+}
+
+.step:hover {
+    transform: translateY(-4px);
+
+    border-color: #444;
+}
+
+.step > span {
+    color: #555;
+
+    font-size: 12px;
+}
+
+.step h3 {
+    margin: 40px 0 12px;
+
+    font-size: 24px;
+}
+
+.step p {
+    color: #888;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    width: min(1100px, 92%);
+
+    margin: auto;
+
+    padding: 60px 0;
+
+    border-top: 1px solid #222;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: #666;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 100px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .product-info {
+        padding: 22px;
+    }
+
+    .claim-area,
+    .result-area {
+        padding: 25px;
+    }
+
+    .evidence-grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .result-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+}
+/* =========================================
+   CLAIM RESULTS
+========================================= */
+
+.claims-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+.claim-card {
+    padding: 28px;
+
+    border: 1px solid #282828;
+
+    border-radius: 18px;
+
+    background: #111111;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.claim-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #444;
+
+    background: #141414;
+}
+
+
+/* =========================================
+   CLAIM CARD HEADER
+========================================= */
+
+.claim-card-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.claim-card-header h3 {
+    margin-top: 6px;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   STATUS BADGES
+========================================= */
+
+.status.contradicted {
+    flex-shrink: 0;
+
+    background: #2b1717;
+
+    color: #ff8d8d;
+
+    border: 1px solid #542323;
+}
+
+
+.status.inconclusive {
+    flex-shrink: 0;
+
+    background: #2b2717;
+
+    color: #e6cf78;
+
+    border: 1px solid #51491f;
+}
+
+
+.status.supported {
+    flex-shrink: 0;
+
+    background: #172b1c;
+
+    color: #82d995;
+
+    border: 1px solid #285536;
+}
+
+
+/* =========================================
+   CONFIDENCE
+========================================= */
+
+.claim-confidence {
+    margin-top: 25px;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #242424;
+
+    border-bottom: 1px solid #242424;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.claim-confidence span {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+.claim-confidence strong {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   EVIDENCE
+========================================= */
+
+.claim-evidence {
+    margin-top: 25px;
+}
+
+
+.claim-evidence ul {
+    margin-top: 12px;
+
+    padding-left: 20px;
+
+    color: #aaa;
+}
+
+
+.claim-evidence li {
+    margin-bottom: 8px;
+
+    line-height: 1.5;
+
+    font-size: 14px;
+}
+
+
+.claim-evidence li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   CLAIM EXPLANATION
+========================================= */
+
+.claim-card .explanation {
+    margin-top: 20px;
+
+    padding: 18px 20px;
+
+    border-left: 2px solid #444;
+
+    border-radius: 0 10px 10px 0;
+
+    background: #0c0c0c;
+}
+
+
+.claim-card .explanation strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+}
+
+
+.claim-card .explanation p {
+    margin: 0;
+
+    color: #999;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   MOBILE CLAIM CARDS
+========================================= */
+
+@media (max-width: 700px) {
+
+    .claim-card {
+        padding: 22px;
+    }
+
+
+    .claim-card-header {
+        flex-direction: column;
+    }
+
+
+    .claim-card-header h3 {
+        font-size: 21px;
+    }
+
+
+    .claim-confidence {
+        align-items: flex-start;
+
+        gap: 10px;
+
+        flex-direction: column;
+    }
+
+}
